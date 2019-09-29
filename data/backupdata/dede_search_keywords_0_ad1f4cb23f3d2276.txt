@@ -1,0 +1,1 @@
+INSERT INTO `dede_search_keywords` VALUES('1','花呗','花呗','37','33','1569673504','0','0');
