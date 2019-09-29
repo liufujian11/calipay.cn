@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>卡派Tags标签列表{dede:field.title/}_{dede:global.cfg_webname/}</title>
+	<meta name="keywords" content="{dede:field name='keywords'/}" />
+	<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+	<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+	<style>
+		main {
+			background: #ffffff;
+		}
+
+		main dl.tbox dt {
+			margin-top: 1rem;
+		}
+
+		main dl.tbox dd a {
+			display: inline-block;
+			margin: 0.25rem 0.6rem;
+		}
+	</style>
+	<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+	<!-- 引入公用css -->
+	{dede:include filename="link_css.htm"/}
+</head>
+
+<body class="tagspage">
+	{dede:include filename="header.htm"/}
+	<!-- /header -->
+
+	<main class="container clear center mt1">
+		<div class="sp-title">
+			<h2 class="section-title">TAG标签列表</h2>
+		</div>
+
+		<div class="tags_list">
+			<dl class="tbox">
+				<dt><strong>最新标签</strong></dt>
+				<dd>
+					{dede:tag row='60' sort='new'}
+					<a href='[field:link/]' class='tagc[field:highlight /]'>[field:tag /]</a>
+					{/dede:tag}
+				</dd>
+			</dl>
+		</div>
+
+		<div class="tags_list mt1">
+			<dl class="tbox">
+				<dt><strong>当月热门标签</strong></dt>
+				<dd>
+					{dede:tag row='60' sort='month'}
+					<a href='[field:link/]' class='tagc[field:highlight /]'>[field:tag /]</a>
+					{/dede:tag}
+				</dd>
+			</dl>
+		</div>
+
+		<div class="tags_list mt1">
+			<dl class="tbox">
+				<dt><strong>随机标签</strong></dt>
+				<dd>
+					{dede:tag row='100' sort='rand'}
+					<a href='[field:link/]' class='tagc[field:highlight /]'>[field:tag /]</a>
+					{/dede:tag}
+				</dd>
+			</dl>
+		</div>
+		<div class="tags_list mt1">
+			<dl class="tbox">
+				<dt><strong>所有标签</strong></dt>
+				<dd>
+					{dede:tag sort='new'}
+					<a href='[field:link/]' class='tagc[field:highlight /]'>[field:tag /]</a>
+					{/dede:tag}
+				</dd>
+			</dl>
+		</div>
+	</main>
+	{dede:include filename="footer.htm"/}
+	<!-- /footer -->
+
+</body>
+
+</html>

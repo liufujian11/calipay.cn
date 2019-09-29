@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{dede:global name='cfg_webname'/}_RSS订阅地图</title>
+	<link href="{dede:global name='cfg_templets_skin'/}/style/dedecms.css" rel="stylesheet" type="text/css"
+		media="screen" />
+		<style type="text/css">
+		main{background: #fff;}
+		nav.linkbox{
+			border: 1px solid #ddd;
+			padding: 1rem;
+			margin: 0.5rem;
+		}
+		nav.linkbox ul.f6{
+			display: flex;
+		}
+		nav.linkbox ul.f6 li{
+			margin-right: 1rem;
+		}
+		</style>
+	</head>
+	<!-- 引入css文件 -->
+	{dede:include filename="link_css.htm"/}
+</head>
+
+<body class="mapspage">
+	<header>
+		<div class="top container center">
+			<div class="title">
+				<h1><a href="{dede:global name='cfg_basehost'/}" title="{dede:global name='cfg_webname'/}">
+						<img src="/images/logo.png" alt="{dede:global name='cfg_webname'/}" /></a>
+				</h1>
+			</div><!-- /title -->
+		</div><!-- /top -->
+	</header>
+	<!-- /header -->
+
+	<main class="container clear center mt1">
+		<div class="sp-title d-flex justify-content-between">
+			<h2 class="section-title">RSS地图</h2>
+			<span class="more btn btn-primary"> <a href='{dede:global name='cfg_basehost'/}'>返回首页 </a> </span> 
+		</div> 
+		<nav class="linkbox"> {dede:global name='maplist'/}	</nav>
+	</main>
+
+	<!-- //底部模板 -->
+	{dede:include filename="footer.htm"/}
+</body>
+
+</html>

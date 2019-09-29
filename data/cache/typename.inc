@@ -1,0 +1,33 @@
+<?php
+$typeArr[1] = '新闻';
+$typeArr[2] = '蚂蚁花呗';
+$typeArr[3] = '京东白条';
+$typeArr[4] = '信用卡';
+$typeArr[5] = '信贷';
+$typeArr[6] = '理财课堂';
+$typeArr[7] = '联系我们';
+$typeArr[8] = '花呗使用';
+$typeArr[9] = '信用卡办理|申请';
+$typeArr[10] = '信用卡使用|技巧';
+$typeArr[11] = '花呗秘籍';
+$typeArr[12] = '理财新闻';
+$typeArr[13] = '金融新闻';
+$typeArr[14] = '白条分期|还款';
+$typeArr[15] = '白条开通|使用';
+$typeArr[16] = 'POS机';
+$typeArr[17] = '花呗还款';
+$typeArr[18] = '京东白条|介绍';
+$typeArr[19] = '花呗提额';
+$typeArr[20] = 'pos机申请|办理';
+$typeArr[21] = 'POS机新闻|资讯';
+$typeArr[22] = '信贷新闻|资讯';
+$typeArr[23] = '花呗介绍';
+$typeArr[24] = '花呗申请';
+$typeArr[25] = '白条提额|提现';
+$typeArr[26] = '白条资讯|技巧';
+$typeArr[27] = 'POS机类型|品牌';
+$typeArr[28] = 'POS机使用|怎样';
+$typeArr[29] = '信用卡提额|还款';
+$typeArr[30] = '信用卡类型|品牌';
+$typeArr[31] = '信贷类型|办理';
+?>

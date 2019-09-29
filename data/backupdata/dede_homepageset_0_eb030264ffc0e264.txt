@@ -1,0 +1,1 @@
+INSERT INTO `dede_homepageset` VALUES('calipay/index.htm','../index.html','1');

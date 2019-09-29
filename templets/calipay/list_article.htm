@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{dede:field.seotitle/}-卡派网</title>
+    <meta name="keywords" content="{dede:field.keywords/}">
+    <meta name="description" content="{dede:field.description/}">
+    <!-- 引入css文件 -->
+    {dede:include filename="link_css.htm"/}
+</head>
+
+<body>
+    <!-- 引入头部文件 -->
+    {dede:include filename="header.htm"/}
+
+    <!-- 主要内容 -->
+    <main>
+
+
+
+        <section class="container">
+            <div class="row">
+                <!-- 左侧内容 -->
+                <div class="col-lg-8">
+                    <!-- 面包屑导航和分类标题 -->
+                    <div class="p-3 mb-3 border-bottom">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-start p-3">
+                                <li class="breadcrumb-item">
+                                    您的位置：{dede:field name='position'/}
+                                </li>
+                            </ol>
+                        </nav>                     
+                        <h1 class="red pl-2">{dede:field.typename/}</h1>
+                        <p>{dede:field.description/}</p>   
+                    </div>
+                    <!-- 列表框 -->
+                    <div class="category-list-view my-3">
+                        <!-- 列表 -->
+                        <ul id="list_artcle" class="p-3">
+                            {dede:list pagesize='16' titlelen='90' infolen='200'}
+                            <li class="row mb-3 py-3 border-bottom">
+                                <div class="col-md-4">
+                                    <div class="postbox_thumb">
+                                        <a href="[field:arcurl/]">
+                                            <img src="[field:litpic/]" width="100%" alt="[field:title/]">
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="postbox_text">
+                                        <h3>
+                                            <a href="[field:arcurl/]">[field:title/]</a>
+                                        </h3>
+                                        <div class="postbox_text-meta pb-2">
+                                            <span> <i class="fa fa-clock-o red mr-2"></i>[field:pudate
+                                                function="Mydate('Y年m月d日 H:i',@me)"/]</span>
+                                            <span><i class="fa fa-comment red mr-2"></i>查看：[field:click/]</span>
+                                        </div>
+                                        <div class="desc-text mb-2">
+                                            <p>[field:infos/]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            {/dede:list}
+                        </ul>
+                        <!-- 分页 -->
+                        <div class="row my-4">
+                            <div class="col-lg-12">
+                                <ul class="pagination pagination-lg">
+                                    {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="3"/}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右侧部分 -->
+                {dede:include filename="right.htm"/}
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部 -->
+    <!-- 引入底部文件 -->
+    {dede:include filename="footer.htm"/}
+</body>
+
+</html>

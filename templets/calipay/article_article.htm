@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{dede:field.title/}-卡派网</title>
+    <meta name="keywords" content="{dede:field.keywords/}" />
+    <meta name="description" content="{dede:field.description function='html2text(@me)'/}">
+    <!-- 引入css文件 -->
+    {dede:include filename="link_css.htm"/}
+</head>
+
+<body>
+    <!-- 引入头部文件 -->
+    {dede:include filename="header.htm"/}
+    <!-- 主体 -->
+    <main>
+        <section class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- 面包屑导航 -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-start p-3">
+                            <li class="breadcrumb-item">
+                                您的位置：{dede:field name='position'/}{dede:field.title/}
+                            </li>
+                        </ol>
+                    </nav>
+
+                    <!-- 正文 -->
+                    <article>
+                        <!-- 标题 -->
+                        <header class="article-header my-3">
+                            <h1 class="details-title">{dede:field.title/}</h1>
+                            <div class="meta small mt-2">
+                                <span><i class="fa fa-user mr-2"></i>
+                                    来源: {dede:field.source/}
+                                </span>
+                                <time class="mr-2"> <i class="fa fa-clock-o mr-2"></i>时间: {dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</time>
+                                <span>
+                                    <i class="fa fa-eye mr-2"></i>浏览: 
+                                    <script
+                                    src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}"
+                                    type='text/javascript' language="javascript">
+                                    </script>次
+                                </span>
+                            </div>
+                        </header>
+                        <!-- 内容 -->
+                        <section class="post-content p-3 my-2">
+                                {dede:field.body/}
+                       </section>
+
+                        <footer class="article-footer">
+                            <!-- 标签 -->
+                            <div class="content_tags my-3">
+                                <span>标签:</span>
+                                <span class="content_tags-list">
+                                    {dede:tag row='10'}
+                                    <a href="[field:link/]">[field:tag/]</a>
+                                    {/dede:tag}
+                                </span>
+                            </div>
+                        </footer>
+
+                    </article>
+
+                    <!-- 上一篇、下一篇 -->
+                    <section class="post-navigation my-3">
+                        <div class="row">
+                            <div class=" col-md-6">
+                                <div class="post_prev">
+                                    <span>上一篇：</span>
+                                    {dede:prenext get='pre'/}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="post_next">
+                                    <span>下一篇：</span>
+                                    {dede:prenext get='next'/}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 你可能喜欢 -->
+                    <section class="also-like my-5">
+                        <div class="col-12 my-3">
+                            <h2 class="section-title">你可能喜欢</h2>
+                        </div>
+
+                        <ul class="row p-2">
+                                {dede:arclist orderby='rand' row='6' titlelen='48'}
+                                <li class="col-lg-4 col-md-6">
+                                    <!-- 图片 -->
+                                    <a href="[field:arcurl/]">
+                                        <img src="[field:litpic/]" class="img-thumbnail" alt="[field:title/]">
+                                    </a>
+                                    <!-- 内容标题 -->
+                                    <div class="post_box mt-2">
+                                        <h4 class="title-16">
+                                            <a href="[field:arcurl/]" alt="[field:title/]"
+                                                title="[field:title/]">[field:title/]</a>
+                                        </h4>
+                                        <time class="small mr-4">
+                                            <i class="fa fa-calendar red mr-2"></i>[field:pubdate
+                                            function="Mydate('Y-m-d',@me)"/]
+                                        </time>
+                                        <span><i class="fa fa-eye red mr-2"></i><small>阅读：[field:click/]</small></span>
+                                    </div>
+                                </li>
+                                {/dede:arclist}
+                            </ul>
+                    </section>
+                </div>
+                <!-- 右侧部分 -->
+                {dede:include filename="right.htm"/}
+            </div>
+        </section>
+    </main>
+    <!-- 底部 -->
+    <!-- 引入底部文件 -->
+    {dede:include filename="footer.htm"/}
+</body>
+
+</html>

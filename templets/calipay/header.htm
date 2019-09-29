@@ -1,0 +1,77 @@
+<header>
+    <!-- 顶部topbar -->
+    <section id="topbar" class="bg-dark">
+        <div class="container d-flex">
+            <!-- topbar左侧 -->
+            <div class="col-md-6 pl-0">
+                <ul class="nav" id="topbar-menu">
+                    <li class="nav-item"><a href="#" class="nav-link">关于我们</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">花呗</a></li>
+                    <li class="nav-item"><a href="/tags.php" class="nav-link">TAG标签</a></li>
+                    <li class="nav-item"><a href="{dede:global.cfg_basehost/}/sitemap.html" .rel="nofollow"
+                            class="nav-link">网站地图</a></li>
+                </ul>
+            </div>
+            <!-- topbar右侧 -->
+            <div class="col-md-6" id="header-social">
+                <a href="#"><i class="fa fa-qq"></i></a>
+                <a href="#"><i class="fa fa-wechat"></i></a>
+                <a href="#"><i class="fa fa-weibo"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- logo和banner区域 -->
+    <section class="container">
+        <div class="row mt-3 mb-3">
+            <div class="col-md-5" id="logo">
+                <a href="{dede:global.cfg_basehost/}">
+                    <img src="/templets/calipay/img/logo/logo.png" title="{dede:global.cfg_webname/}"
+                        alt="{dede:global.cfg_webname/}">
+                </a>
+            </div>
+            <div class="col-md-7" id="banner-img">
+                <a href="{dede:global.cfg_basehost/}"><img src="/templets/calipay/img/logo/header-add.jpg" alt=""></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 导航条 -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+        <div class="container">
+            <a href="{dede:global.cfg_basehost/}" class="navbar-brand">卡派首页</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#nav1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="nav1" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    {dede:channelartlist row='8' typeid='1,2,3,4,16,5'}
+                    <li class="nav-li">
+                        <a href="{dede:field name='typeurl'/}" class="dropdown-toggle">{dede:field name='typename'/}</a>
+                        <ul class="submenu">
+                            {dede:channel type='son' row='6'}
+                            <li><a href="[field:typelink/]">[field:typename/]</a></li>
+                            {/dede:channel}
+                        </ul>
+                    </li>
+                    {/dede:channelartlist}
+                    {dede:type typeid='6'}
+                    <li>
+                        <a href="[field:typelink/]">[field:typename/]</a>
+                    </li>
+                    {/dede:type}
+                    {dede:type typeid='7'}
+                    <li>
+                        <a href="[field:typelink/]" .rel="nofollow">[field:typename/]</a>
+                    </li>
+                    {/dede:type}
+                </ul>
+                <form name="formsearch" class="form-inline" action="/plus/search.php">
+                    <input type="text" name="q" placeholder="搜索" class="form-control">
+                    <button class="btn btn-danger">搜索</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+</header>

@@ -1,0 +1,46 @@
+<?php
+$z[0]=Array("field","",229,248);
+$z[0][4]=array();
+$z[0][4]['name']="title";
+$z[1]=Array("global","",249,275);
+$z[1][4]=array();
+$z[1][4]['name']="cfg_webname";
+$z[2]=Array("field","",317,346);
+$z[2][4]=array();
+$z[2][4]['name']="keywords";
+$z[3]=Array("field","",387,445);
+$z[3][4]=array();
+$z[3][4]['name']="description";
+$z[3][4]['function']="html2text(@me)";
+$z[4]=Array("global","",464,496);
+$z[4][4]=array();
+$z[4][4]['name']="cfg_templets_skin";
+$z[5]=Array("global","",823,848);
+$z[5][4]=array();
+$z[5][4]['name']="cfg_cmsurl";
+$z[6]=Array("include","",910,949);
+$z[6][4]=array();
+$z[6][4]['filename']="link_css.htm";
+$z[7]=Array("include","",988,1025);
+$z[7][4]=array();
+$z[7][4]['filename']="header.htm";
+$z[8]=Array("tag","\r\n					<a href='[field:link/]' class='tagc[field:highlight /]'>[field:tag /]</a>\r\n					",1289,1417);
+$z[8][4]=array();
+$z[8][4]['row']="60";
+$z[8][4]['sort']="new";
+$z[9]=Array("tag","\r\n					<a href='[field:link/]' class='tagc[field:highlight /]'>[field:tag /]</a>\r\n					",1570,1700);
+$z[9][4]=array();
+$z[9][4]['row']="60";
+$z[9][4]['sort']="month";
+$z[10]=Array("tag","\r\n					<a href='[field:link/]' class='tagc[field:highlight /]'>[field:tag /]</a>\r\n					",1847,1977);
+$z[10][4]=array();
+$z[10][4]['row']="100";
+$z[10][4]['sort']="rand";
+$z[11]=Array("tag","\r\n					<a href='[field:link/]' class='tagc[field:highlight /]'>[field:tag /]</a>\r\n					",2122,2241);
+$z[11][4]=array();
+$z[11][4]['sort']="new";
+$z[12]=Array("include","",2285,2322);
+$z[12][4]=array();
+$z[12][4]['filename']="footer.htm";
+
+?>

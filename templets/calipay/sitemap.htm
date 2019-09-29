@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{dede:global name='cfg_webname'/}_网站地图</title>
+	<link href="{dede:global name='cfg_templets_skin'/}/style/dedecms.css" rel="stylesheet" type="text/css"
+		media="screen" />
+</head>
+
+<body class="mapspage">
+
+	<header>
+		<div class="top w960 center">
+			<div class="title">
+				<h1><a href="{dede:global name='cfg_basehost'/}" title="{dede:global name='cfg_webname'/}"><img
+							src="{dede:global name='cfg_templets_skin'/}/img/logo/logo.png" alt="" /></a> </h1>
+			</div><!-- /title -->
+		</div><!-- /top -->
+	</header><!-- /header -->
+
+	<main>
+		<section class="w960 clear center mt1">
+			<div class="sp-title">
+				<h2>网站地图</h2>
+				<span class="more">
+					<a href="{dede:global name=' cfg_basehost'/}">返回首页 </a>
+				</span>
+			</div>
+			<p>----------------------栏目列表----------------------</p>
+			{dede:global name='maplist'/}
+			<p>----------------------文章列表----------------------</p>
+			<ul>
+				{dede:arclist orderby=’pubdate’ row='999999' }
+				<li><a href="[field:arcurl/]">[field:title/]</a></li>
+				{/dede:arclist}
+			</ul>
+		</section>
+	</main>
+
+	<!-- //底部模板 -->
+	<footer>
+		<section class="footer w960 center mt1 clear">
+			<div class="footer_body">
+				<p class="powered">Powered by 
+					<a href="{dede:global name='cfg_basehost'/}" target="_blank">
+						<strong>无锡财辉投资有限公司</strong></a> &copy; 2017-2019 
+						<br>
+					<a href="{dede:global name='cfg_basehost'/}" target="_blank">卡派网</a> Inc.<br />
+				</p>
+				<!-- /powered -->
+			</div>
+		</section>
+	</footer>
+</body>
+
+</html>

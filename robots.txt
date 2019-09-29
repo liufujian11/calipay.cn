@@ -1,0 +1,9 @@
+User-agent: * 
+Disallow: /include
+Disallow: /templets
+Disallow: /cadmin/
+Disallow: /data/
+Disallow: /plus/
+
+Sitemap: https://www.calipay.com/sitemap.xml
+Sitemap: https://www.calipay.com/sitemap.html
